@@ -1,0 +1,386 @@
+/* ============================= */
+/* GLOBAL RESET */
+/* ============================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background:  #667eea ;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1e293b;
+}
+
+/* ============================= */
+/* LANDING PAGE */
+/* ============================= */
+.blue{
+  background:  #6477cc ;
+}
+.container {
+  width: 100%;
+  max-width: 400px;
+  padding: 35px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  margin: 20px;
+}
+
+/* Navbar */
+.navbar {
+  margin-bottom: 28px;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  background: #f1f5f9;
+  padding: 6px;
+  border-radius: 12px;
+}
+
+.navbar li {
+  flex: 1;
+  cursor: pointer;
+  padding: 10px 18px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+color: #ffffff;
+  text-transform: capitalize;
+}
+
+.navbar li:hover {
+  background: white;
+  color: #6366f1;
+}
+
+.navbar li.active {
+  background: #6366f1;
+  color: white;
+}
+
+/* Landing Form Container */
+.container > div:last-child ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.container > div:last-child ul li {
+  width: 100%;
+}
+
+.container > div:last-child ul li:nth-last-child(2) {
+  text-align: center;
+  font-size: 14px;
+  color: #94a3b8;
+  margin-top: 8px;
+}
+
+/* ============================= */
+/* DASHBOARD */
+/* ============================= */
+
+.dashboard {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px 20px;
+}
+
+.welcome {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 35px;
+  text-align: center;
+  color: white;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Dashboard Container */
+.dashboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+@media (max-width: 968px) {
+  .dashboard-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+  height: 600px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  margin-bottom: 24px;
+  font-weight: 700;
+  font-size: 20px;
+  color: #1e293b;
+  border-bottom: 3px solid #6366f1;
+  padding-bottom: 10px;
+  width: 100%;
+  flex-shrink: 0;
+}
+
+/* ============================= */
+/* QUICK ACTIONS */
+/* ============================= */
+
+.quick-actions {
+  text-align: center;
+}
+
+.quick-actions h2 {
+  display: block;
+  width: 100%;
+}
+
+.quick-actions-content {
+  overflow-y: auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-actions-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.quick-actions-content::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 10px;
+}
+
+.quick-actions-content::-webkit-scrollbar-thumb {
+  background: #818cf8;
+  border-radius: 10px;
+}
+
+.dropdown-form {
+  margin-top: 20px;
+}
+
+/* Form */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 2px solid #e2e8f0;
+  background: #f8fafc;
+  font-size: 15px;
+  transition: all 0.3s;
+  color: #1e293b;
+}
+
+input::placeholder {
+  color: #94a3b8;
+}
+
+input:focus {
+  border-color: #6366f1;
+  outline: none;
+  background: white;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+}
+
+/* Checkbox */
+.checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 14px;
+  color: #64748b;
+  margin: 4px 0;
+  cursor: pointer;
+}
+
+.checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: #6366f1;
+  cursor: pointer;
+}
+
+/* Buttons */
+.btn,
+button {
+  width: 100%;
+  padding: 14px 20px;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  text-transform: capitalize;
+}
+
+.btn.primary,
+button:not(.btn) {
+  background: linear-gradient(135deg, #818cf8, #6366f1);
+  color: white;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.btn.primary:hover,
+button:not(.btn):hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+}
+
+.btn.danger {
+  margin-top: 24px;
+  background: #ef4444;
+  color: white;
+}
+
+.btn.danger:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* ============================= */
+/* RECENT COMPLAINTS */
+/* ============================= */
+
+.recent-complaints-content {
+  overflow-y: auto;
+  flex: 1;
+}
+
+.recent-complaints-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.recent-complaints-content > p {
+  text-align: center;
+  color: #94a3b8;
+  font-style: italic;
+  padding: 40px 0;
+}
+
+/* Complaint Card */
+.complaint-item {
+  background: #f8fafc;
+  padding: 18px;
+  border-radius: 12px;
+  margin-bottom: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.complaint-item > div {
+  flex: 1;
+}
+
+.complaint-item h4 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 6px;
+}
+
+.complaint-item p {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+.complaint-item p:last-child {
+  margin-top: 8px;
+  font-weight: 500;
+  color: #f59e0b;
+}
+
+/* Urgent Styling */
+.urgent {
+  border-left: 4px solid #ef4444;
+  background: #fff5f5;
+}
+
+.urgent-badge {
+  background: #ef4444;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+
+@media (max-width: 480px) {
+  .container {
+    padding: 28px;
+    max-width: 100%;
+    margin: 16px;
+  }
+
+  .welcome {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 24px;
+    height: auto;
+  }
+
+  .card h2 {
+    font-size: 18px;
+  }
+
+  .complaint-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .urgent-badge {
+    align-self: flex-start;
+  }
+}
